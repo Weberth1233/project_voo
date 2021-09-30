@@ -43,25 +43,52 @@ class CardViagens extends StatelessWidget {
                   ),
                 ],
               ),
-              Text(
-                'Destino:' + companhiaViagem.destino.nome,
-                style: const TextStyle(fontSize: 12),
+              Row(
+                children: [
+                  const Icon(Icons.map),
+                  Text(
+                    'Destino:' + companhiaViagem.destino.nome,
+                    style: const TextStyle(fontSize: 12),
+                  ),
+                ],
               ),
-              Text(
-                'Origem:' + companhiaViagem.origem.nome,
-                style: const TextStyle(fontSize: 12),
+              Row(
+                children: [
+                  const Icon(Icons.my_location),
+                  Text(
+                    'Origem:' + companhiaViagem.origem.nome,
+                    style: const TextStyle(fontSize: 12),
+                  ),
+                ],
               ),
-              Text(
-                'Data inicial:' + companhiaViagem.dataInicial.toString(),
-                style: const TextStyle(fontSize: 12),
+              Row(
+                children: [
+                  const Icon(Icons.calendar_today),
+                  Text(
+                    'Data inicial:' + companhiaViagem.dataInicial.toString(),
+                    style: const TextStyle(fontSize: 12),
+                  ),
+                ],
               ),
-              Text(
-                'Data final:' + companhiaViagem.dataFinal.toString(),
-                style: const TextStyle(fontSize: 12),
+              Row(
+                children: [
+                  const Icon(Icons.date_range),
+                  Text(
+                    'Data final:' + companhiaViagem.dataFinal.toString(),
+                    style: const TextStyle(fontSize: 12),
+                  ),
+                ],
               ),
-              Text(
-                'Valor:' + companhiaViagem.valor.toString(),
-                style: const TextStyle(fontSize: 15),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: Text(
+                    "Valor:" + companhiaViagem.valor.toString(),
+                    style: const TextStyle(
+                        fontSize: 17, fontWeight: FontWeight.bold),
+                  ),
+                ),
               ),
             ],
           ),

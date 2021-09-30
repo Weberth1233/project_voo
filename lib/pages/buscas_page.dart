@@ -40,7 +40,7 @@ class _BuscasPageState extends State<BuscasPage> {
   @override
   Widget build(BuildContext context) {
     final result = retorno.isEmpty == true
-        ? const Text('Não foi realizado nenhuma busca')
+        ? const Text('Não há resultados!')
         : ListView.builder(
             itemBuilder: (context, i) => CardViagens(
                   companhiaViagem: retorno.elementAt(i),

@@ -42,6 +42,28 @@ class ViagemRepository {
             "Boinh4566", DateTime.now(), DateTime.now(), 4555),
       ];
       listagem = viagensB;
+    } else if (value == 3) {
+      List<Viagem> viagensC = [
+        Viagem(
+            Cidade("Manaus", "Amazonas"),
+            Cidade("Porto Alegre", "Rio grande do Sul"),
+            "Boinh456",
+            DateTime.now(),
+            DateTime.now(),
+            2300),
+        Viagem(Cidade("Porto", "Portugual"), Cidade("São Paulo", "São Paulo"),
+            "Boinh4569", DateTime.now(), DateTime.now(), 3000),
+        Viagem(Cidade("Manaus", "Amazonas"), Cidade("Lisboa", "Portugual"),
+            "Boinh4565", DateTime.now(), DateTime.now(), 3989),
+        Viagem(
+            Cidade("Rio de Janeiro", "Rio de Janeiro"),
+            Cidade("Nova York", "EUA"),
+            "Boinh4566",
+            DateTime.now(),
+            DateTime.now(),
+            4555),
+      ];
+      listagem = viagensC;
     }
     return listagem;
   }
