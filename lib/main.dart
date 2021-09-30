@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_decolar/pages/buscas_page.dart';
+import 'package:project_decolar/pages/companhias_page.dart';
 import 'components/botom_component.dart';
 
 void main() => runApp(const MyApp());
@@ -19,14 +19,13 @@ class MyApp extends StatelessWidget {
         // you want
         primarySwatch: Colors.purple,
       ),
-      home: MyHomePage(title: 'Companhias'),
+      home: MyHomePage(title: 'Your Travel'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
-
 
   final String title;
 
@@ -48,14 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
-        actions:<Widget>[
-          IconButton(onPressed: (){}, icon: const Icon(Icons.search))
-        ]
       ),
-      
-      bottomNavigationBar:BottomNavigator(),
+
+      bottomNavigationBar: BottomNavigator(),
       body: Container(
-        child: const BuscasPage(),
+        child: const CompanhiaPage(),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

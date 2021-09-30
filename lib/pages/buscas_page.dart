@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_decolar/components/botom_component.dart';
 import 'package:project_decolar/components/card_viagens_component.dart';
 import 'package:project_decolar/components/textfield_component.dart';
 import 'package:project_decolar/controllers/viagens_controller.dart';
@@ -48,46 +49,52 @@ class _BuscasPageState extends State<BuscasPage> {
             itemCount: retorno.length);
 
     return Scaffold(
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text('Procurando Viagens'),
+        ),
+        bottomNavigationBar: BottomNavigator(),
         body: Column(
-      children: [
-        Container(
-            alignment: Alignment.topCenter,
-            margin: const EdgeInsets.only(top: 20, left: 10),
-            child: Column(
-              children: [
-                TextFieldComp(
-                    label: "Origem",
-                    myController: _controladororigem,
-                    type: TextInputType.text,
-                    icone: const Icon(Icons.my_location)),
-                TextFieldComp(
-                  label: "Destino",
-                  myController: _controladordestino,
-                  icone: const Icon(Icons.map),
-                  type: TextInputType.text,
-                ),
-                TextFieldComp(
-                  label: "Valor Máximo:",
-                  myController: _controladorvalor,
-                  icone: const Icon(Icons.paid),
-                  type: TextInputType.number,
-                ),
-                Padding(padding: const EdgeInsets.only(top: 10)),
-                RaisedButton(
-                  color: Colors.purple,
-                  textColor: Colors.white,
-                  child: Text('Buscar'),
-                  onPressed: buscandoCidade,
-                ),
-              ],
-            )),
-        Padding(padding: const EdgeInsets.only(top: 10)),
-        Expanded(
-          child: Container(
-            child: result,
-          ),
-        )
-      ],
-    ));
+          children: [
+            Container(
+                alignment: Alignment.topCenter,
+                margin: const EdgeInsets.only(top: 20, left: 10),
+                child: Column(
+                  children: [
+                    TextFieldComp(
+                        label: "Origem",
+                        myController: _controladororigem,
+                        type: TextInputType.text,
+                        icone: const Icon(Icons.my_location)),
+                    TextFieldComp(
+                      label: "Destino",
+                      myController: _controladordestino,
+                      icone: const Icon(Icons.map),
+                      type: TextInputType.text,
+                    ),
+                    TextFieldComp(
+                      label: "Valor Máximo:",
+                      myController: _controladorvalor,
+                      icone: const Icon(Icons.paid),
+                      type: TextInputType.number,
+                    ),
+                    Padding(padding: const EdgeInsets.only(top: 10)),
+                    RaisedButton(
+                      color: Colors.purple,
+                      textColor: Colors.white,
+                      child: Text('Buscar'),
+                      onPressed: buscandoCidade,
+                    ),
+                  ],
+                )),
+            Padding(padding: const EdgeInsets.only(top: 10)),
+            Expanded(
+              child: Container(
+                child: result,
+              ),
+            )
+          ],
+        ));
   }
 }
