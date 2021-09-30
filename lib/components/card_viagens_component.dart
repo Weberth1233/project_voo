@@ -7,11 +7,11 @@ class CardViagens extends StatelessWidget {
 
   final Viagem companhiaViagem;
 
-  const CardViagens({Key? key, required this.companhiaViagem}) : super(key: key);
+  const CardViagens({Key? key, required this.companhiaViagem})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-  
     return Container(
       child: Card(
         clipBehavior: Clip.antiAlias,
@@ -21,28 +21,51 @@ class CardViagens extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stack(alignment: Alignment.center,
-              children: [
-                Ink.image(image: const NetworkImage('https://cdn.pixabay.com/photo/2020/06/23/11/07/transport-5332224_1280.jpg'),
-                height:240,
-                child: InkWell(onTap: (){},),
-                fit: BoxFit.cover,),
-                Text(companhiaViagem.aviao ,style: const TextStyle(
-                  fontWeight:FontWeight.bold,
-                  color: Colors.white,
-                  fontSize:24,
-                ),
-                ),
-              ],
+              Stack(
+                alignment: Alignment.center,
+                children: [
+                  Ink.image(
+                    image: const NetworkImage(
+                        'https://cdn.pixabay.com/photo/2020/06/23/11/07/transport-5332224_1280.jpg'),
+                    height: 240,
+                    child: InkWell(
+                      onTap: () {},
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  Text(
+                    companhiaViagem.aviao,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
               ),
-              Text('Destino:'+companhiaViagem.destino.nome, style: const TextStyle(fontSize: 12),),
-              Text('Origem:'+companhiaViagem.origem.nome, style: const TextStyle(fontSize: 12),),
-              Text('Data inicial:'+companhiaViagem.dataInicial.toString(), style: const TextStyle(fontSize: 12),),
-              Text('Data final:'+companhiaViagem.dataFinal.toString(), style: const TextStyle(fontSize: 12),),
+              Text(
+                'Destino:' + companhiaViagem.destino.nome,
+                style: const TextStyle(fontSize: 12),
+              ),
+              Text(
+                'Origem:' + companhiaViagem.origem.nome,
+                style: const TextStyle(fontSize: 12),
+              ),
+              Text(
+                'Data inicial:' + companhiaViagem.dataInicial.toString(),
+                style: const TextStyle(fontSize: 12),
+              ),
+              Text(
+                'Data final:' + companhiaViagem.dataFinal.toString(),
+                style: const TextStyle(fontSize: 12),
+              ),
+              Text(
+                'Valor:' + companhiaViagem.valor.toString(),
+                style: const TextStyle(fontSize: 15),
+              ),
             ],
           ),
         ),
-        
       ),
     );
   }
