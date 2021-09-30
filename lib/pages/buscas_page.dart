@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_decolar/components/botom_component.dart';
-import 'package:project_decolar/components/card_viagens_component.dart';
+import 'package:project_decolar/components/chip_component.dart';
 
 class BuscasPage extends StatefulWidget {
   
@@ -15,21 +14,17 @@ class _BuscasPageState extends State<BuscasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Buscas"),
-      ),
-      bottomNavigationBar:BottomNavigator(),
-      
-      body: Center(
-        child: Chip(
-          avatar: CircleAvatar(
-            backgroundColor: Colors.grey.shade800,
-            child: const Text('AB'),
-          ),
-          label: const Text('Aaron Burr'),
-        ),
-      )
-    );
+        body: Container(
+            alignment: Alignment.topCenter,
+            margin: const EdgeInsets.only(top: 20, left: 10),
+            child: Row(
+              children: [
+                ChipComponent(texto: 'Cidades'),
+                ChipComponent(texto: 'Horário'),
+                ChipComponent(texto: 'Data'),
+                ChipComponent(texto: "Valor"),
+              ],
+            )));
 
   }
 }

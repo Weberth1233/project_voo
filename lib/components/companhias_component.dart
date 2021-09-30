@@ -9,7 +9,10 @@ class CompanhiaTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final avatar = companhia.url == null || companhia.url.isEmpty ? CircleAvatar(child: Icon(Icons.person)) : CircleAvatar(backgroundImage: NetworkImage(companhia.url));
+    final avatar = companhia.url == null || 
+    companhia.url.isEmpty ? CircleAvatar(child: Icon(Icons.person)) : 
+    CircleAvatar(backgroundImage: NetworkImage(companhia.url));
+    
     return ListTile(
       leading: avatar,
       title: Text(
