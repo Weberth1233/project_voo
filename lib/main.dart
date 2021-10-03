@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project_decolar/components/profile_component.dart';
 import 'package:project_decolar/pages/companhias_page.dart';
 import 'components/botom_component.dart';
+import 'models/usuario.dart';
 
 void main() => runApp(const MyApp());
 
@@ -44,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
@@ -51,8 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
       bottomNavigationBar: BottomNavigator(),
       body: Container(
-        child: const CompanhiaPage(),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+          child:
+              const ProfileComponent()), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

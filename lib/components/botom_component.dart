@@ -35,7 +35,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: updateIndex,
-        selectedItemColor: Colors.blue[700],
+        selectedItemColor: Colors.grey,
         selectedFontSize: 13,
         unselectedFontSize: 13,
         iconSize: 30,

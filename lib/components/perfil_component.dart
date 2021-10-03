@@ -28,8 +28,8 @@ class PerfilComponent extends StatelessWidget {
                     Ink.image(
                       image: const NetworkImage(
                           'https://th.bing.com/th/id/R.2e81f97ed9247fbc9116fa29b854628e?rik=w6kD4QYTOPSOcA&pid=ImgRaw&r=0'),
-                      height: 240,
-                      width: 250,
+                      height: 50,
+                      width: 50,
                       child: InkWell(
                         onTap: () {},
                       ),
