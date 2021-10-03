@@ -13,16 +13,19 @@ class _CompanhiaPageState extends State<CompanhiaPage> {
   final tabela = CompanhiaRepository.tabela;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: ListView.separated(
-              itemBuilder: (ctx, i) => CompanhiaTile(tabela.elementAt(i)),
-              padding: const EdgeInsets.all(10),
-              separatorBuilder: (_, __) => Divider(),
-              itemCount: tabela.length),
-        ),
-      ],
+    return Material(
+
+      child: Column(
+        children: [
+          Expanded(
+            child: ListView.separated(
+                itemBuilder: (ctx, i) => CompanhiaTile(tabela.elementAt(i)),
+                padding: const EdgeInsets.all(10),
+                separatorBuilder: (_, __) => Divider(),
+                itemCount: tabela.length),
+          ),
+        ],
+      ),
     );
   }
 }

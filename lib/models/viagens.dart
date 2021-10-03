@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 import 'cidades.dart';
 
 class Viagem {
@@ -46,4 +48,20 @@ class Viagem {
   }
 
   double get valor => _valor;
+
+  String getFormatDateInicial() {
+    DateFormat data = DateFormat('dd/MM/yyyy HH:mm');
+    return data.format(dataInicial);
+  }
+
+  String getFormatDateFinal() {
+    DateFormat data = DateFormat('dd/MM/yyyy HH:mm');
+    return data.format(dataFinal);
+  }
+
+  String getCurrency() {
+    NumberFormat formatter = NumberFormat.simpleCurrency(locale: 'pt_BR');
+
+    return formatter.format(valor);
+  }
 }

@@ -43,6 +43,9 @@ class CardViagens extends StatelessWidget {
                   ),
                 ],
               ),
+
+              Text('Informações Viagem', style: TextStyle(fontSize: 15),),
+              Divider(),
               Row(
                 children: [
                   const Icon(Icons.map),
@@ -65,7 +68,7 @@ class CardViagens extends StatelessWidget {
                 children: [
                   const Icon(Icons.calendar_today),
                   Text(
-                    'Data inicial:' + companhiaViagem.dataInicial.toString(),
+                    'Data inicial: ' + companhiaViagem.getFormatDateInicial(),
                     style: const TextStyle(fontSize: 12),
                   ),
                 ],
@@ -74,7 +77,7 @@ class CardViagens extends StatelessWidget {
                 children: [
                   const Icon(Icons.date_range),
                   Text(
-                    'Data final:' + companhiaViagem.dataFinal.toString(),
+                    'Data final: ' + companhiaViagem.getFormatDateFinal(),
                     style: const TextStyle(fontSize: 12),
                   ),
                 ],
@@ -84,7 +87,7 @@ class CardViagens extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.topRight,
                   child: Text(
-                    "Valor:" + companhiaViagem.valor.toString(),
+                    companhiaViagem.getCurrency(),
                     style: const TextStyle(
                         fontSize: 17, fontWeight: FontWeight.bold),
                   ),

@@ -81,7 +81,7 @@ class _BuscasPageState extends State<BuscasPage> {
                     ),
                     Padding(padding: const EdgeInsets.only(top: 10)),
                     RaisedButton(
-                      color: Colors.purple,
+                      color: Colors.indigoAccent,
                       textColor: Colors.white,
                       child: Text('Buscar'),
                       onPressed: buscandoCidade,

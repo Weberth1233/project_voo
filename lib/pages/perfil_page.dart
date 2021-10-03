@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_decolar/components/botom_component.dart';
 import 'package:project_decolar/components/perfil_component.dart';
+import 'package:project_decolar/components/profile_component.dart';
 import 'package:project_decolar/repositorys/usuario_repository.dart';
 
 class PerfilPage extends StatefulWidget {
@@ -15,14 +16,13 @@ class _PerfilPageState extends State<PerfilPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          elevation: 0,
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
           title: Text('Perfil'),
         ),
-        bottomNavigationBar: BottomNavigator(),
-        body: PerfilComponent(
-          usuario: UsuarioRepository().usu,
-        ) // This trailing comma makes auto-formatting nicer for build methods.
+        bottomNavigationBar: const BottomNavigator(),
+        body: const ProfileComponent(), // This trailing comma makes auto-formatting nicer for build methods.
         );
   }
 }
