@@ -40,8 +40,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
         currentIndex: currentIndex,
         onTap: updateIndex,
         selectedItemColor: Colors.white,
-        selectedFontSize: 13,
-        unselectedFontSize: 13,
+        selectedFontSize: 14,
+        unselectedFontSize: 14,
         iconSize: 30,
         items: const [
           BottomNavigationBarItem(
