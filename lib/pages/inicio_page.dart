@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_decolar/components/botom_component.dart';
+import 'package:project_decolar/pages/aeroporto_page.dart';
 
-import 'companhias_page.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -23,6 +23,13 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
+        actions: const [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Icon(Icons.search),
+          ),
+          Icon(Icons.more_vert),
+        ],
         elevation: 0,
         automaticallyImplyLeading: false,
         // Here we take the value from the MyHomePage object that was created by
@@ -31,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       bottomNavigationBar: const BottomNavigator(),
-      body: const CompanhiaPage(), // This trailing comma makes auto-formatting nicer for build methods.
+      body: AeroportoPage(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
